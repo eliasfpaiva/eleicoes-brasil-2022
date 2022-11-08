@@ -10,7 +10,7 @@ Para realizar a coleta usei o seguinte script via console do navegador Chrome.
 
 `let linhas = urlsZipBoletins.map(l => (l.parentElement.parentElement.parentElement.parentElement.children[0].title.replace('Boletim de Urna - ', '') + ';' + l.href + ';'));`
 
-`let linhasConcatenadas = linhas.join('&*&*&*&*&*');`
+`let linhasConcatenadas = ['Estado e turno; link',[...linhas]].join('&*&*&*&*&*');`
 
 Com a string resultante em mãos eu utilizei o [Sublime Text](https://www.sublimetext.com) para fazer as quebras de linha substituindo a sequência '&*&*&*&*&*' por uma quebra de linha, obtendo assim um arquivo CSV com todos os links dos boletins de urna do país do primeiro e do segundo turno.
 
