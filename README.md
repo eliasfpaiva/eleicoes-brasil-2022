@@ -6,12 +6,12 @@ Iniciei coletanto os endereços para a obtenção dos boletins de urnas disponí
 
 Para realizar a coleta usei o seguinte script via console do navegador Chrome.
 
-`const urlsZipBoletins = [...document.querySelectorAll('a[href$=".zip"]')];`
+`let urlsZipBoletins = [...document.querySelectorAll('a[href$=".zip"]')];`
 
-`const linhas = urlsZipBoletins.map(l => (l.parentElement.parentElement.parentElement.parentElement.children[0].title + ';' + l.href + ';'));`
+`let linhas = urlsZipBoletins.map(l => (l.parentElement.parentElement.parentElement.parentElement.children[0].title.replace('Boletim de Urna - ', '') + ';' + l.href + ';'));`
 
-`const linhasConcatenadas = linhas.join('&*&*&*&*&*');`
+`let linhasConcatenadas = linhas.join('&*&*&*&*&*');`
 
-A string resultante eu utilizei o [Sublime Text](https://www.sublimetext.com/) para fazer as quebras de linha substituindo a sequência '&*&*&*&*&*' por uma quebra de linha, obtendo assim um arquivo CSV com todos os links dos boletins de urna do país do primeiro e do segundo turno.
+Com a string resultante em mãos eu utilizei o [Sublime Text](https://www.sublimetext.com/) para fazer as quebras de linha substituindo a sequência '&*&*&*&*&*' por uma quebra de linha, obtendo assim um arquivo CSV com todos os links dos boletins de urna do país do primeiro e do segundo turno.
 
 ## Análise do segundo turno
