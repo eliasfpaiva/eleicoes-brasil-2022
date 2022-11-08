@@ -14,6 +14,8 @@ Para realizar a coleta usei o seguinte script via console do navegador Chrome.
 
 Com a string resultante em mãos eu utilizei o [Sublime Text](https://www.sublimetext.com) para fazer as quebras de linha substituindo a sequência '&*&*&*&*&*' por uma quebra de linha, obtendo assim um arquivo CSV com todos os links dos boletins de urna do país do primeiro e do segundo turno.
 
-O arquivo resultante [pode ser acessado clicando aqui](./linksBoletinsUrnas.csv)
+O arquivo resultante [pode ser acessado clicando aqui](./linksBoletinsUrnas.csv).
+
+Este arquivo foi carregado no Jupter Notebook que criei para fazer as análises e pode ser acessado [clicando aqui](https://colab.research.google.com/drive/1wVW5QNYDLzCYTCWGxG83P8XowoXy-3Z2?usp=sharing).
 
 ## Análise do segundo turno
